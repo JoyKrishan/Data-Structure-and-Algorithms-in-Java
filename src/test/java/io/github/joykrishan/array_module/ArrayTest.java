@@ -27,5 +27,15 @@ public class ArrayTest {
         Assert.assertArrayEquals(expected, arr.getItems());
     }
 
+    @Test
+    public void indexOfMethodShouldReturnAnIndexIfItemFound(){
+        Array arr = new Array(3);
+        arr.insert(2);
+        arr.insert(3);
+        arr.insert(10);
+        int expectedIdx = 2;
+        Assert.assertEquals(expectedIdx, arr.indexOf(10));
+    }
+
 
 }
